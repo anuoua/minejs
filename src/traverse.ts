@@ -132,35 +132,6 @@ const NodeMap: any = {
     }
   },
 
-  // ForInStatement(node: EsTree.ForInStatement, scope: Scope) {
-  //   const { left, right, body} = node
-  //   const obj = traverse(right, scope)
-  //   const forInScope = new Scope(scope)
-  //   let last
-
-  //   // traverse(left, forInScope)
-
-  //   for (let key in obj) {
-  //     traverse(left, forInScope, obj[key])
-  //     const forInBodyScope = new Scope(forInScope)
-  //     const result = traverse(body, forInBodyScope)
-      
-  //     if (result instanceof Interrupt) {
-  //       if (result.type === CONTINUE) {
-  //         continue
-  //       } else if (result.type === BREAK) {
-  //         return result.data
-  //       } else if (result.type === RETURN) {
-  //         return result
-  //       }
-  //     } else {
-  //       last = result
-  //     }
-  //   }
-
-  //   return last
-  // },
-
   SequenceExpression(node: EsTree.SequenceExpression, scope: Scope) {
     return node.expressions.map(expression => traverse(expression, scope)).pop()
   },
