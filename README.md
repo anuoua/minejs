@@ -1,17 +1,17 @@
-# mine-js
+# mine-jsjs
 
 一个ts实现的js解释器
 
 ## 安装
 
 ```bash
-$ npm install mine-js
+$ npm install mine-jsjs
 ```
 
 ## 使用方法
 
 ```javascript
-import { run } from 'mine-js'
+import { run } from 'mine-jsjs'
 
 run(code, options)
 ```
@@ -19,14 +19,14 @@ run(code, options)
 直接跑代码
 
 ```javascript
-import { run } from 'mine-js'
+import { run } from 'mine-jsjs'
 run(`console.log("hello world!")`)
 // hello world!
 ```
 
 直接跑ast节点
 ```javascript
-import { run } from 'mine-js'
+import { run } from 'mine-jsjs'
 run(
 {
   "type": "Program",
@@ -85,7 +85,7 @@ run(
 例子:
 
 ```javascript
-import { run } from 'mine-js'
+import { run } from 'mine-jsjs'
 const str = 'hello'
 run(`console.log(hello + ' world')`, { hello: str })
 // hello world
@@ -96,7 +96,7 @@ run(`console.log(hello + ' world')`, { hello: str })
 例子：
 
 ```javascript
-import { run } from 'mine-js'
+import { run } from 'mine-jsjs'
 run(`
 exports.hello = 'hello'
 `)
