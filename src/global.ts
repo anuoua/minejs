@@ -1,6 +1,8 @@
+const $global = global || window
+
 export const globalObj = {
-  this: global,
-  self: global,
+  this: $global,
+  self: $global,
   Array,
   ArrayBuffer,
   Boolean,
@@ -12,7 +14,7 @@ export const globalObj = {
   Float32Array,
   Float64Array,
   Function,
-  GLOBAL: global,
+  GLOBAL: $global,
   Infinity,
   Int16Array,
   Int32Array,
@@ -56,7 +58,7 @@ export const globalObj = {
   parseFloat,
   parseInt,
   process,
-  root: global,
+  root: $global,
   setImmediate,
   setInterval,
   setTimeout,

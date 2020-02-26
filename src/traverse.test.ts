@@ -210,7 +210,7 @@ describe('代码运行测试', () => {
       exports.run = function () {
         return Object.assign(arguments[0], arguments[1])
       }
-    `, {}, true)
+    `, { injectObj: {}, module: true })
     expect(run2({}, { hello: 'world' })).toMatchObject({hello: 'world'})
   })
 
@@ -513,7 +513,7 @@ describe('for循环测试', () => {
 })
 
 it('代码自举测试', () => {
-  const { run: run2 } = run(readFileSync('./dist/index.js').toString(), {}, true)
+  const { run: run2 } = run(readFileSync('./dist/index.js').toString(), { injectObj: {}, module: true })
 
   run2(`console.log('自举成功！！！！')`)
 })

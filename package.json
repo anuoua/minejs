@@ -1,6 +1,6 @@
 {
-  "name": "minejs",
-  "version": "1.0.0",
+  "name": "mine-js",
+  "version": "0.0.1",
   "description": "js runtime",
   "main": "dist/index.js",
   "scripts": {
@@ -27,5 +27,6 @@
     "webpack-cli": "^3.3.10"
   },
   "author": "anuoua",
+  "homepage": "https://github.com/anuoua/minejs",
   "license": "MIT"
 }
